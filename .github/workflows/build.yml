@@ -31,10 +31,10 @@ jobs:
     - name: Clone FFmpeg repository
       run: git clone https://github.com/FFmpeg/FFmpeg.git
       
-    - name: Configure and build FFmpeg for M1
+    - name: Configure and build FFmpeg
       run: |
         cd FFmpeg
-        ./configure --arch=arm64 --enable-static --disable-shared
+        ./configure --enable-static --disable-shared
         make
         # Optionally, you can install FFmpeg after successful compilation
-        sudo make install
+        # sudo make install
